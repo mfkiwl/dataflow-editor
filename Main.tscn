@@ -1,0 +1,243 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg4e4irvytmco"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_nwdbo"]
+[ext_resource type="Script" path="res://GraphNode.gd" id="2_b8ely"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38n5b"]
+bg_color = Color(0.152941, 0.152941, 0.152941, 1)
+border_width_left = 1
+border_width_right = 1
+border_blend = true
+
+[node name="Control" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 128.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nwdbo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="Home" type="HBoxContainer" parent="VBoxContainer/TabContainer"]
+layout_mode = 2
+
+[node name="File" type="PanelContainer" parent="VBoxContainer/TabContainer/Home"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_38n5b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Home/File"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/Home/File/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="New" type="Button" parent="VBoxContainer/TabContainer/Home/File/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "New Dataflow"
+text = "New
+"
+
+[node name="Open" type="Button" parent="VBoxContainer/TabContainer/Home/File/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Open"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Home/File/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="VBoxContainer/TabContainer/Home/File/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Save"
+
+[node name="Save-As" type="Button" parent="VBoxContainer/TabContainer/Home/File/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Save-As
+"
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/Home/File/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "File"
+horizontal_alignment = 1
+
+[node name="Edit" type="PanelContainer" parent="VBoxContainer/TabContainer/Home"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_38n5b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Home/Edit"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/Home/Edit/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="InsertNode" type="Button" parent="VBoxContainer/TabContainer/Home/Edit/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Insert Node"
+
+[node name="RemoveNode" type="Button" parent="VBoxContainer/TabContainer/Home/Edit/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Remove Node"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Home/Edit/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Undo" type="Button" parent="VBoxContainer/TabContainer/Home/Edit/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Undo"
+
+[node name="Redo" type="Button" parent="VBoxContainer/TabContainer/Home/Edit/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Redo
+"
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/Home/Edit/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Edit"
+horizontal_alignment = 1
+
+[node name="Application" type="PanelContainer" parent="VBoxContainer/TabContainer/Home"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_38n5b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Home/Application"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/Home/Application/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Settings" type="Button" parent="VBoxContainer/TabContainer/Home/Application/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Settings
+"
+
+[node name="Plugins" type="Button" parent="VBoxContainer/TabContainer/Home/Application/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Plugins"
+
+[node name="Help" type="Button" parent="VBoxContainer/TabContainer/Home/Application/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Help"
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/Home/Application/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Application
+"
+horizontal_alignment = 1
+
+[node name="Analyze" type="HBoxContainer" parent="VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Launch" type="PanelContainer" parent="VBoxContainer/TabContainer/Analyze"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_38n5b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Analyze/Launch"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/Analyze/Launch/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/TabContainer/Analyze/Launch/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="Button2" type="Button" parent="VBoxContainer/TabContainer/Analyze/Launch/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Cancel"
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/Analyze/Launch/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Launch"
+horizontal_alignment = 1
+
+[node name="Launch Options" type="PanelContainer" parent="VBoxContainer/TabContainer/Analyze"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_38n5b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Analyze/Launch Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/Analyze/Launch Options/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/Analyze/Launch Options/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Launch Options"
+horizontal_alignment = 1
+
+[node name="Plugins" type="HBoxContainer" parent="VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="GraphEdit" type="GraphEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+right_disconnects = true
+scroll_offset = Vector2(0, -56)
+
+[node name="GraphNode" type="GraphNode" parent="VBoxContainer/GraphEdit"]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 114.0
+offset_right = 703.0
+offset_bottom = 329.0
+mouse_filter = 1
+title = "test"
+position_offset = Vector2(430, 58)
+show_close = true
+resizable = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("2_b8ely")
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/GraphEdit/GraphNode"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/GraphEdit/GraphNode/PanelContainer"]
+layout_mode = 2
+text = "Test"
+
+[connection signal="pressed" from="VBoxContainer/TabContainer/Home/Edit/VBoxContainer/HBoxContainer/InsertNode" to="." method="_on_insert_node_pressed"]
+[connection signal="pressed" from="VBoxContainer/TabContainer/Home/Edit/VBoxContainer/HBoxContainer/VBoxContainer/Undo" to="." method="_on_undo_pressed"]
+[connection signal="pressed" from="VBoxContainer/TabContainer/Home/Edit/VBoxContainer/HBoxContainer/VBoxContainer/Redo" to="." method="_on_redo_pressed"]
+[connection signal="connection_request" from="VBoxContainer/GraphEdit" to="." method="_on_graph_edit_connection_request"]
+[connection signal="delete_nodes_request" from="VBoxContainer/GraphEdit" to="." method="_on_graph_edit_delete_nodes_request"]
+[connection signal="disconnection_request" from="VBoxContainer/GraphEdit" to="." method="_on_graph_edit_disconnection_request"]

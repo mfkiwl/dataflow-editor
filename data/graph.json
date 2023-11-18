@@ -1,0 +1,43 @@
+  {
+	"nodes": [
+	{
+	  "id": 0,
+	  "type": "test_source",
+	  "prop": {
+		"value": 1
+	  }
+	},
+	{
+	  "id": 1,
+	  "type": "test_node",
+	  "prop": {}
+	},
+	{
+	  "id": 2,
+	  "type": "test_sink",
+	  "prop": {}
+	}
+	],
+	"links": [
+	  {
+		"from": {
+		  "id": 0,
+		  "port": 0
+		},
+		"to": {
+		  "id": 1,
+		  "port": 0
+		}
+	  },
+	  {
+		"from": {
+		  "id": 1,
+		  "port": 0
+		},
+		"to": {
+		  "id": 2,
+		  "port": 0
+		}
+	  }
+	]
+  }

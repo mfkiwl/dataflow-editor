@@ -1,0 +1,42 @@
+{
+  "test_node": {
+	"inputs": {
+	  "0": {
+		"label": "Input",
+		"type": "int"
+	  }
+	},
+	"outputs": {
+	  "0": {
+		"label": "Output",
+		"type": "int"
+	  }
+	},
+	"props": {}
+  },
+  "test_sink": {
+	"inputs": {
+	  "0": {
+		"label": "Input",
+		"type": "int"
+	  }
+	},
+	"outputs": {},
+	"props": {}
+  },
+  "test_source": {
+	"inputs": {},
+	"output": {
+	  "0": {
+		"label": "Output",
+		"type": "int"
+	  }
+	},
+	"props": {
+	  "value": {
+		"label": "Value",
+		"type": "int"
+	  }
+	}
+  }
+}
